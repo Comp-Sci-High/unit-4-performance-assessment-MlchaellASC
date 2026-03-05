@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WanderLog | Travel Entries</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <h1 class="logo">🌍 WanderLog</h1>
+    <a href="/" class="home-link">Home</a>
+  </nav>
+
+  <section class="overview-header">
+    <h2>All Travel Entries</h2>
+    <p>Explore all of my documented adventures below.</p>
+  </section>
+
+  <section class="posts-container">
+
+    <!-- Repeatable Post Component -->
+<section class = "post-detail">
+      <img src="<%= post.imageURL %>" alt="Trip Image">
+      <div class="post-content">
+        <h3><%= post.title %></h3>
+        <p class="location"><%= post.location %></p>
+        <p class="description"><%= post.description %></p>
+        <p class="rating">Rating: <%= post.rating %>/10</p>
+        <p class="budget">Budget: $ <%= post.budget %></p>
+        <h3>highlights</h3>
+        <ul>
+            <% post.highlights.forEach(highlight => { %>
+    <li><%= highlight %></li>
+      <% }) %>
+     
+        </ul> 
+      </div>
+    </div>
+  
+
+  </section>
+
+  <footer>
+    <p>© 2026 WanderLog</p>
+  </footer>
+
+</body>
+</html>
